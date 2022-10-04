@@ -1,52 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>3D Scene</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-</head>
-<body>
-    <div class="cloud" id="cloud-base"></div>
-    <div class="cloud" id="cloud-back"></div>
-    <div class="cloud" id="cloud-mid"></div>
-    <div class="cloud" id="cloud-front"></div>
-    <svg width="0" height="0">
-        <!-- Top Layer -->
-        <filter id="filter-base">
-            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="5" seed="8517" />
-            <feDisplacementMap in="SourceGraphic" scale="120" />
-        </filter>
-
-        <!-- Back Layer -->
-        <filter id="filter-back">
-            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="8517" />
-            <feDisplacementMap in="SourceGraphic" scale="120" />
-        </filter>
-
-        <!-- Middle Layer -->
-        <filter id="filter-mid">
-            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="8517" />
-            <feDisplacementMap in="SourceGraphic" scale="120" />
-        </filter>
-
-        <!-- Front Layer -->
-        <filter id="filter-front">
-            <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="4" seed="8517" />
-            <feDisplacementMap in="SourceGraphic" scale="50" />
-        </filter>
-    </svg>
-
+<!DOCTYPE html> 
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
     <a-scene>
-        <a-assets>
-            <a-entity obj-model="obj:#BASIC-o; mtl:#BASIC-m"
-                    position="10 0 0"
-                    scale="0.1 0.1 0.1">
-                </a-entity>
-        </a-assets>
-    </a-scene>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 0.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="2 0.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="3 0.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="4 0.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="5 0.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="1 0.25 -5" rotation="0 0 0" ></a-box>
+      
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 0.75 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="2 0.75 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="3 0.75 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="4 0.75 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="5 0.75 -5" rotation="0 0 0" ></a-box>
+      
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 1 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="3 1 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="4 1 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="5 1 -5" rotation="0 0 0" ></a-box>
+      
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 1.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="3 1.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="4 1.25 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="5 1.25 -5" rotation="0 0 0" ></a-box>
+      
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 1.75 -5" rotation="0 0 0" ></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="4 1.75 -5" rotation="0 0 0"></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="5 1.75 -5" rotation="0 0 0"></a-box>
+      
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 2 -5" rotation="0 0 0"></a-box>
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="5 2 -5" rotation="0 0 0"></a-box>
+      
+      <a-box src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 2.25 -5" rotation="0 0 0"></a-box>
+      
 
-</body>
+      
+      <a-cylinder  position="0 0.75 -5" radius="0.3" height="1.5" color = "black"></a-cylinder>
+      <a-plane src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 0 -4" rotation="-90 0 0" width="20" height="4"></a-plane>
+     
+      
+      <a-sphere position="0 1.75 -5" radius="0.4" color="#FFC65D"></a-sphere>
+      <a-cylinder position="0.2 0.75 -4.5" rotation="0 0 45" radius="0.1" height=".7" color="#FFC65D"></a-cylinder>
+      <a-plane src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6 4 -5" rotation="0 0 0" width="20" height="8"></a-plane>
+      <a-plane src="https://cdn.glitch.global/8dc8cea1-bdb7-4cfa-88dd-dadcff2ebaf5/image.jpg?v=1664846324928" position="6.05 4 -4.55" rotation="0 30 0" rotation="0 45 0" width="1.1" height="2.5"></a-plane>
+      <a-plane position="6 4 -5" rotation="0 0 0" width="1.1" height="2.5" color="black"></a-plane>
+      
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
 </html>
